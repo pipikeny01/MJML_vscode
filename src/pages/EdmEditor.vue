@@ -126,8 +126,8 @@ const templateOptions = computed(() => {
   const systemOptions = [
     {
       id: 'preset-default',
-      name: '房仲預設範本',
-      label: '房仲預設範本（含標題、地址、總價區塊）',
+      name: '預設範本',
+      label: '預設範本（含標題、地址、總價區塊）',
       mjml: DEFAULT_MJML_TEMPLATE,
       html: '',
       purpose: '系統範本',

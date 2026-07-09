@@ -4,7 +4,7 @@
       <div class="brand-mark">21</div>
       <div>
         <p class="brand-kicker">Real Estate EDM Builder</p>
-        <h1>房仲 MJML 樣板編輯器</h1>
+        <h1> MJML 樣板編輯器</h1>
       </div>
     </div>
 

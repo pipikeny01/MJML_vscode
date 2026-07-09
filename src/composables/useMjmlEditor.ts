@@ -11,7 +11,7 @@ export interface ExportedTemplate {
 export const DEFAULT_MJML_TEMPLATE = `
 <mjml>
   <mj-head>
-    <mj-title>房仲 EDM 樣板</mj-title>
+    <mj-title> EDM 樣板</mj-title>
     <mj-preview>{ObjectName} 精選物件資訊</mj-preview>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica, sans-serif" />

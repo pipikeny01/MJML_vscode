@@ -24,7 +24,7 @@
 3. **型別與防呆**：確保元件 Props 具有明確的型別定義與預設值（使用 `defineProps` 與 `defineEmits`）。
 4. **逐步實作與回報**：請按步驟建立或修改檔案。每完成一個核心模組，請向使用者回報進度與實作邏輯。
 
-# 具體功能需求：GrapesJS + Vuetify 4 房仲 EDM 編輯器
+# 具體功能需求：GrapesJS + Vuetify 4  EDM 編輯器
 
 請幫我開發一個 Vue 3 單頁面應用，核心是將 GrapesJS (搭配 MJML 外掛) 整合進 Vue 的組件生命週期中。
 
@@ -34,7 +34,7 @@
 - 初始化時，必須啟動 `grapesjs-mjml` 外掛，確保畫布使用的是 MJML 結構。
 
 ## 2. 外部自訂參數按鈕與 GrapesJS 互動
-- 在畫面側邊或上方（使用 Vuetify 4 的 v-btn），獨立設計三個「房仲資料參數」按鈕：`{ObjectName}` (物件名稱)、`{ObjectAddress}` (物件地址)、`{SellTotalPrice}` (總價)。
+- 在畫面側邊或上方（使用 Vuetify 4 的 v-btn），獨立設計三個「資料參數」按鈕：`{ObjectName}` (物件名稱)、`{ObjectAddress}` (物件地址)、`{SellTotalPrice}` (總價)。
 - **核心邏輯**：當使用者點擊這些外部按鈕時，程式必須獲取目前 GrapesJS 的選取元件（`editor.getSelected()`）。
   - 若選取的元件是文字類型（Text Component），則將對應的參數字串（如 `{ObjectName}`）附加（Append）到該文字元件的內容中。
   - 若目前未選取任何元件或非文字元件，使用 Vuetify 的 `v-snackbar` 跳出防呆提示：「請先點擊畫布上的文字區塊，再插入參數」。
