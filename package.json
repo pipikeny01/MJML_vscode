@@ -1,0 +1,25 @@
+{
+  "name": "mjml-vscode-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "grapesjs": "^0.23.2",
+    "grapesjs-mjml": "^1.0.8",
+    "@lucide/vue": "^1.23.0",
+    "pinia": "latest",
+    "vite": "latest",
+    "vue": "latest",
+    "vuetify": "^4.1.4"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vue-tsc": "latest"
+  }
+}

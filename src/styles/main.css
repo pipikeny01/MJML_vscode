@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Noto Sans TC', 'Outfit', sans-serif;
+  color: #f4e8cf;
+  background: #0f0f10;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.editor-toolbar {
+  border-bottom: 1px solid rgba(200, 162, 79, 0.28);
+  background: rgba(16, 16, 18, 0.92) !important;
+  backdrop-filter: blur(18px);
+}
+
+.toolbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 20px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(237, 213, 160, 0.65);
+  background: linear-gradient(160deg, #1d1d1f 0%, #121214 100%);
+  color: #d7b977;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+.brand-kicker,
+.panel-heading p,
+.panel-heading span,
+.canvas-topline {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.brand-kicker {
+  color: #d4b67d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #f6e7c8;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.editor-main {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(200, 162, 79, 0.22), transparent 30%),
+    radial-gradient(circle at 84% 92%, rgba(173, 133, 62, 0.18), transparent 34%),
+    linear-gradient(145deg, #0f0f10 0%, #131315 48%, #18181c 100%);
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 18px;
+  height: calc(100vh - 72px);
+  padding: 18px;
+}
+
+.token-panel,
+.canvas-shell {
+  border: 1px solid rgba(200, 162, 79, 0.25);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(26, 26, 30, 0.92) 0%, rgba(17, 17, 20, 0.92) 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.token-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px;
+  align-content: start;
+}
+
+.panel-heading {
+  grid-column: 1 / -1;
+  padding-bottom: 8px;
+}
+
+.panel-heading p {
+  color: #f6e7c8;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.panel-heading span {
+  color: #c3ad7f;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.token-button {
+  justify-content: center;
+  min-height: 38px;
+  padding-inline: 6px;
+  font-size: 0.72rem;
+}
+
+.canvas-shell {
+  display: grid;
+  grid-template-rows: 46px minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.canvas-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(200, 162, 79, 0.2);
+  color: #ccb589;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.canvas-topline strong {
+  color: #e5c989;
+}
+
+.gjs-host {
+  min-width: 0;
+  min-height: 0;
+}
+
+.gjs-one-bg {
+  background-color: #1a1a1c;
+}
+
+.gjs-two-color {
+  color: #f2dfb8;
+}
+
+.gjs-three-bg {
+  background-color: #2a2a2f;
+}
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+  color: #c8a24f;
+}
+
+.gjs-pn-btn.gjs-pn-active,
+.gjs-pn-btn:hover,
+.gjs-block:hover {
+  color: #101012;
+  background-color: #c8a24f;
+}
+
+.gjs-block {
+  border: 1px solid rgba(200, 162, 79, 0.35);
+  border-radius: 6px;
+}
+
+.gjs-title,
+.gjs-sm-sector-title,
+.gjs-label {
+  color: #e7d2a2;
+}
+
+/* 只影響這個編輯器實例 */
+.gjs-host .gjs-editor {
+  --gjs-left-width: 250px; /* 改小=中間設定更窄，右邊畫布更寬 */
+}
+.preview-dialog {
+  border-radius: 8px !important;
+}
+
+.preview-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f2dfb8;
+  font-weight: 800;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: 16px;
+}
+
+.template-picker-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.95fr);
+  gap: 16px;
+}
+
+.template-option-list {
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.template-option-item p,
+.template-option-item span {
+  margin: 0;
+}
+
+.template-option-item p {
+  color: #f2dfb8;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.template-option-item span {
+  color: #c7b48f;
+  font-size: 0.74rem;
+}
+
+.template-preview-panel {
+  border: 1px solid rgba(200, 162, 79, 0.3);
+  border-radius: 8px;
+  background: rgba(17, 17, 20, 0.86);
+  padding: 12px;
+}
+
+.template-preview-title {
+  margin: 0 0 10px;
+  color: #f2dfb8;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.template-mini-preview {
+  width: 100%;
+  height: 240px;
+  border: 1px solid rgba(200, 162, 79, 0.2);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.template-preview-empty {
+  display: grid;
+  height: 240px;
+  place-items: center;
+  border: 1px dashed rgba(200, 162, 79, 0.35);
+  border-radius: 6px;
+  color: #ccb589;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0 12px;
+}
+
+.template-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.template-preview-note {
+  margin: 8px 0 0;
+  color: #ccb589;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.save-form-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.preview-frame-wrap,
+.preview-code {
+  height: 62vh;
+  border: 1px solid rgba(200, 162, 79, 0.3);
+  border-radius: 8px;
+  background: #151518;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #101012;
+}
+
+.preview-code {
+  margin: 0;
+  padding: 14px;
+  overflow: auto;
+  color: #f2dfb8;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 960px) {
+  body {
+    overflow: auto;
+  }
+
+  .editor-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: calc(100vh - 72px);
+  }
+
+  .token-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel-heading {
+    flex-basis: 100%;
+  }
+
+  .token-button {
+    min-height: 36px;
+  }
+
+  .canvas-shell {
+    min-height: 720px;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-picker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .editor-toolbar {
+    height: auto !important;
+  }
+
+  .toolbar-brand {
+    padding-left: 12px;
+  }
+
+  .toolbar-actions {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 12px 12px;
+  }
+
+  .editor-layout {
+    padding: 12px;
+  }
+}
